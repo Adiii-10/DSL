@@ -19,7 +19,7 @@ def Minimum():
       i = 0
       min = marksInFDS[i]
       for i in range(num):
-            if(marksInFDS[i] < min):
+            if(marksInFDS[i] < min and marksInFDS[i]!=-1):
                   min = marksInFDS[i]
       print("The lowest score is:", min)
       repeat()
@@ -59,7 +59,7 @@ def repeat():
             print("!!Invalid Input!!")
 
 num=int(input("Enter total number of students: "))
-print("Enter '0' for absent students")
+print("Enter '-1' for absent students")
 for i in range(num):
       marks=int(input("Enter marks of student "+str(i+1)+" : "))
       marksInFDS.append(marks)
